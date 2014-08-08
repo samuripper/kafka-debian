@@ -6,9 +6,9 @@ REVISION=$2
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUILD_DIR="kafka_$VERSION-$REVISION"
 KAFKA_DIR="$BUILD_DIR/opt/kafka"
-TARFILE="kafka-$VERSION-incubating-src.tgz"
+TARFILE="kafka-$VERSION-src.tgz"
 CONTROL_FILE="$BUILD_DIR/DEBIAN/control"
-URL="http://mirrors.ibiblio.org/apache/incubator/kafka/kafka-$VERSION-incubating/$TARFILE"
+URL="http://mirrors.ibiblio.org/apache/kafka/$VERSION/$TARFILE"
 
 
 function help {

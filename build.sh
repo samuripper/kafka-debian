@@ -64,8 +64,8 @@ mkdir -p $KAFKA_DIR
 tar -zxf $TARFILE --strip 1 -C $KAFKA_DIR
 
 cd $KAFKA_DIR
-./sbt update
-./sbt package
+sbt update
+sbt package
 
 cd $DIR
 sed -i "s/\$VERSION/$VERSION/g" $CONTROL_FILE

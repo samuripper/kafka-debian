@@ -64,8 +64,10 @@ mkdir -p $KAFKA_DIR
 tar -zxf $TARFILE --strip 1 -C $KAFKA_DIR
 
 cd $KAFKA_DIR
-sbt update
-sbt package
+sbt "++2.9.2 update"
+##sbt package
+sbt "++2.9.2 package"
+## ./sbt "++2.9.2 package" ./sbt "++2.9.2 make-pom" ./sbt "++2.9.2 assembly-package-dependency"
 
 cd $DIR
 sed -i "s/\$VERSION/$VERSION/g" $CONTROL_FILE

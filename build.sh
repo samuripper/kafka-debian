@@ -47,7 +47,7 @@ fi
 
 if [ ! -f "$TARFILE" ]
 then
-    wget -O $TARFILE $URL
+    wget -q -O $TARFILE $URL
 fi
 
 if [ -f "$KAFKA_DIR" ]
